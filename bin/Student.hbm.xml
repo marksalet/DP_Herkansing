@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="hu.nl.hibernate.Student" table="student">
+
+      <id name="id" type="int" access="field">
+      		<column name="ID" />
+			<generator class="assigned" />
+      </id>
+      
+      <property name="naam" column="naam" type="java.lang.String"/>
+	  <property name="gbdatum" column="gbdatum" type="java.sql.Date"/>
+	  <property name="klascode" column="klas_code" type="java.lang.String"/>
+	
+	</class>
+	
+		<class name="hu.nl.hibernate.Klas" table="klas">
+
+      <id name="code" type="java.lang.String" access="field">
+      		<column name="CODE" />
+			<generator class="assigned" />
+      </id>
+      
+      <property name="code" column="code" type="java.lang.String"/>
+	  <property name="startjaar" column="startjaar" type="int"/>
+	
+	</class>
+</hibernate-mapping>
+
