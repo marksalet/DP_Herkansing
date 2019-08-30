@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry excluding="P4_5/" kind="src" path=""/>
 	<classpathentry kind="src" path="P4_5"/>
-	<classpathentry kind="lib" path="/LesProject/lib/javax.persistence-api-2.2.jar"/>
-	<classpathentry kind="lib" path="/LesProject/lib/hibernate-core-5.3.1.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/marks/eclipse-workspace/PLIJN-master/herkansing/DP_Herkansing/lib/hibernate-core-5.3.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/marks/eclipse-workspace/PLIJN-master/herkansing/DP_Herkansing/lib/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/marks/eclipse-workspace/PLIJN-master/herkansing/DP_Herkansing/lib/javax.persistence-api-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/marks/eclipse-workspace/PLIJN-master/herkansing/DP_Herkansing/lib/jboss-logging-3.1.1.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/marks/eclipse-workspace/PLIJN-master/herkansing/DP_Herkansing/lib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/marks/eclipse-workspace/PLIJN-master/herkansing/DP_Herkansing/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/marks/eclipse-workspace/PLIJN-master/herkansing/DP_Herkansing/lib/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/marks/eclipse-workspace/PLIJN-master/herkansing/DP_Herkansing/lib/byte-buddy-1.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/marks/eclipse-workspace/PLIJN-master/herkansing/DP_Herkansing/lib/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/marks/eclipse-workspace/PLIJN-master/herkansing/DP_Herkansing/lib/jackson-databind-2.9.9.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

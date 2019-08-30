@@ -1,6 +1,6 @@
 package hu.nl.hibernate;
 
-import java.sql.Date;
+import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Iterator;
@@ -24,8 +24,8 @@ public class Studentenmain {
 		}
 		Studentenmain SE = new Studentenmain();
 
-		
-      Integer st11 = SE.addStudent(485, "Ja", To_date('23-12-2019'), "V1E");
+	  SimpleDateFormat format = new SimpleDateFormat("ddMMyyyy");
+      Integer st11 = SE.addStudent(485, "Ja", format.parse("23-12-2019"), "V1E");
 
       SE.updateStudent(st11, "jan");
       SE.listStudenten();
@@ -48,8 +48,10 @@ public class Studentenmain {
 			e.printStackTrace();
 		} finally {
 			session.close();
-
-			public void listStudenten() {
+		}
+	}	
+		
+	public void listStudenten() {
 		Session session = factory.openSession();
 		Transaction tx = null;
 
@@ -87,29 +89,27 @@ public class Studentenmain {
 	         session.close(); 
 	      }
 	}
-			public Integer addStudent(int id, String naam, Date gbdatum, String klascode) {
-				Session session = factory.openSession();
-				Transaction tx = null;
-				Integer nm = null;
+	
+	public Integer addStudent(int id, String naam, Date gbdatum, String klascode) {
+		Session session = factory.openSession();
+		Transaction tx = null;
+		Integer nm = null;
 
-				try {
-					tx = session.beginTransaction();
-					Student student = new Student();
-					student.setId(id);
-					student.setNaam(naam);
-					student.setGbdatum(gbdatum);
-					student.setKlas_code(klascode);
-					nm = (Integer) session.save(student);
-					tx.commit();
-				} catch (HibernateException e) {
-					if (tx!=null) tx.rollback();
-					e.printStackTrace();
-				} finally {
-					session.close();
-				}
-				return nm;
-			}
-}
+		try {
+			tx = session.beginTransaction();
+			Student student = new Student();
+			student.setId(id);
+			student.setNaam(naam);
+			student.setGbdatum(gbdatum);
+			student.setKlascode(klascode);
+			nm = (Integer) session.save(student);
+			tx.commit();
+		} catch (HibernateException e) {
+			if (tx!=null) tx.rollback();
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return nm;
 	}
-
 }

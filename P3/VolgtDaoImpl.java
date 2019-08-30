@@ -13,7 +13,7 @@ public class VolgtDaoImpl extends OracleBaseDao implements VolgtDao {
         Statement st;
         ResultSet rs;
         try (Connection conn = super.getConnection()){
-            String codeinf = "SELECT * form volgt where vak_code = '" + code +"' ";
+            String codeinf = "SELECT * form volgt where code = '" + code +"' ";
             st = conn.createStatement();
             rs = st.executeQuery(codeinf);
             while (rs.next()) {

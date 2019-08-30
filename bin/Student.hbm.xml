@@ -11,7 +11,7 @@
       </id>
       
       <property name="naam" column="naam" type="java.lang.String"/>
-	  <property name="gbdatum" column="gbdatum" type="java.sql.Date"/>
+	  <property name="gbdatum" column="gbdatum" type="java.util.Date"/>
 	  <property name="klascode" column="klas_code" type="java.lang.String"/>
 	
 	</class>

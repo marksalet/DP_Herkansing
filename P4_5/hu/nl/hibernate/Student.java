@@ -1,6 +1,6 @@
 package hu.nl.hibernate;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.*;
 import javax.persistence.*;
 

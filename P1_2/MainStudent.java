@@ -9,7 +9,7 @@ public class MainStudent {
 
 		System.out.println("studenten:");
 		for (Student student : studentDao.findAll()) {
-			System.out.println("Naam : " + student.getNaam() + "Geboortedatum: " + student.getGbdatum() + "Klas: " + student.getKlas_code());
+			System.out.println("Naam : " + student.getNaam() + " | Geboortedatum: " + student.getGbdatum() + " | Klas: " + student.getKlas_code());
 		}
 
 
